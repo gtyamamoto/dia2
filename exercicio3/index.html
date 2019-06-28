@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div><input type="text" id="inputString" placeholder="digite aqui alguma coisa">
+   
+    </div>
+   <img src="" alt="" srcset="" id="imgFruit">
+    <script>
+    (function(){
+
+   const fruits = {
+       uva:{
+           fruta:'uva',
+           imagem:'uva.png'
+       },
+       uva1:{
+           fruta:'uva1',
+           imagem:'uva1.png'
+       },
+       uva2:{
+           fruta:'uva2',
+           imagem:'uva2.png'
+       },
+       uva3:{
+           fruta:'uva3',
+           imagem:'uva3.png'
+       },
+       uva4:{
+           fruta:'uva4',
+           imagem:'uva4.png'
+       },
+
+   }
+const input = document.querySelector("#inputString")
+const imgFruit = document.querySelector("#imgFruit")
+
+input.addEventListener('input',(ev)=>{
+    if(fruits[`${input.value}`]){
+        
+        imgFruit.setAttribute('src',`${input.value}.png`);
+    }
+    else{
+        imgFruit.setAttribute('src','')
+    }
+})
+})();
+    
+    </script>
+</body>
+</html>

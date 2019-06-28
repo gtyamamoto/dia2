@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Sortear Fruta</button>
+   <div>
+    <img src="" alt="" srcset="" id="imgFruit">
+   </div>
+    
+    <script>
+    (function(){
+
+   const fruits = {
+       uva:{
+           fruta:'uva',
+           imagem:'uva.png'
+       },
+       uva1:{
+           fruta:'uva1',
+           imagem:'uva1.png'
+       },
+       uva2:{
+           fruta:'uva2',
+           imagem:'uva2.png'
+       },
+       uva3:{
+           fruta:'uva3',
+           imagem:'uva.png'
+       },
+       uva4:{
+           fruta:'uva4',
+           imagem:'uva.png'
+       }
+
+   }
+const btn = document.querySelector("#btn")
+const imgFruit = document.querySelector("#imgFruit")
+
+btn.addEventListener('click',(ev)=>{
+    const index = Math.floor((5*Math.random()));
+    console.log(index)
+    imgFruit.setAttribute('src',fruits[Object.keys(fruits)[index]].imagem)
+
+})
+})();
+    
+    </script>
+</body>
+</html>
